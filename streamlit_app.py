@@ -57,7 +57,7 @@ test_data_recall_score3 = recall_score(Y_test, X_test_prediction3)
 
 import streamlit as st
 input_data = st.text_input('Enter the features:',"10.95,21.35,71.9,371.1,0.1227,0.1218,0.1044,0.05669,0.1895,0.0687,0.2366,1.428,1.822,16.97,0.008064,0.01764,0.02595,0.01037,0.01357,0.00304,12.84,35.34,87.22,514,0.1909,0.2698,0.4023,0.1424,0.2964,0.09606")
-st.text_input("Input", "အမုန်းမပွားရဘူးနော်")
+#st.text_input("Input", "အမုန်းမပွားရဘူးနော်")
 
 #st.write(type(input_data))
 input_data = input_data.strip().split(",")
