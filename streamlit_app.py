@@ -69,6 +69,7 @@ input_data = np.asarray([float(i) for i in input_data]).reshape(1, -1)
 # reshape the numpy array as we are predicting for one datapoint
 input_data_reshaped = input_data.reshape(1,-1)
 
+prediction = model1.predict(input_data_reshaped)
 
 if (prediction[0] == 0):
    #print(f'This Cancer is Malignant, testing by LogistiRegression.')
