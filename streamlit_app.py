@@ -69,17 +69,8 @@ input_data = np.asarray([float(i) for i in input_data]).reshape(1, -1)
 # reshape the numpy array as we are predicting for one datapoint
 input_data_reshaped = input_data.reshape(1,-1)
 
-if st.button():
-   prediction1 = model1.predict(input_data_reshaped)
-   print(f' Using Logistic Regression : ',prediction)
-   
-   prediction2 = model2.predict(input_data_reshaped)
-   print(f' Using DecisionTreeClassifier : ',prediction)
-   
-   prediction3 = model3.predict(input_data_reshaped)
-   print(f' Using DecisionTreeClassifier : ',prediction)
 
-if (prediction1[0] == 0):
+if (prediction[0] == 0):
    #print(f'This Cancer is Malignant, testing by LogistiRegression.')
    st.write('This Cancer is Malignant, testing by LogistiRegression')
 else:
@@ -87,19 +78,19 @@ else:
    st.write('This Cancer is Malignant, testing by LogistiRegression')
    
    
-#prediction = model2.predict(input_data_reshaped)
+prediction = model2.predict(input_data_reshaped)
 print(f' Using DecisionTreeClassifier : ',prediction)
 
-if (prediction2 == 0):
+if (prediction == 0):
   st.write(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
 else:
   st.write(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
 
 
-#prediction = model3.predict(input_data_reshaped)
+prediction = model3.predict(input_data_reshaped)
 print(f' Using DecisionTreeClassifier : ',prediction)
 
-if (prediction3 == 0):
+if (prediction == 0):
   st.write(f' This Cancer is Malignant, testing by RandomForestClassifier.')
 else:
   st.write(f' This Cancer is Benign, testing by RandomForestClassifier.')
