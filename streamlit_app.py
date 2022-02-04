@@ -56,12 +56,14 @@ test_data_precision3  = precision_score(Y_test, X_test_prediction3)
 test_data_recall_score3 = recall_score(Y_test, X_test_prediction3)
 
 import streamlit as st
-input_data = st.text_input('CSV file path')
-st.write(type(input_data))
-input_data_as_numpy_array = np.asarray(input_data)
-st.write(input_data_as_numpy_array)
+input_data = st.text_input('10.95,21.35,71.9,371.1,0.1227,0.1218,0.1044,0.05669,0.1895,0.0687,0.2366,1.428,1.822,16.97,0.008064,0.01764,0.02595,0.01037,0.01357,0.00304,12.84,35.34,87.22,514,0.1909,0.2698,0.4023,0.1424,0.2964,0.09606')
+#st.write(type(input_data))
+input_data = np.asarray(input_data.strip().split(",")).astype(np.float)
+
+#input_data_as_numpy_array = np.asarray(input_data)
+#st.write(input_data_as_numpy_array)
 # reshape the numpy array as we are predicting for one datapoint
-input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+input_data_reshaped = input_data.reshape(1,-1)
 
 
 prediction = model1.predict(input_data_reshaped)
