@@ -85,15 +85,15 @@ prediction = model2.predict(input_data_reshaped)
 print(f' Using DecisionTreeClassifier : ',prediction)
 
 if (prediction == 0):
-  print(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
 else:
-  print(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
 
 
 prediction = model3.predict(input_data_reshaped)
 print(f' Using DecisionTreeClassifier : ',prediction)
 
 if (prediction == 0):
-  print(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
 else:
-  print(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
