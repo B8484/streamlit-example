@@ -94,6 +94,6 @@ prediction = model3.predict(input_data_reshaped)
 print(f' Using DecisionTreeClassifier : ',prediction)
 
 if (prediction == 0):
-  st.write(f' This Cancer is Malignant, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Malignant, testing by RandomForestClassifier.')
 else:
-  st.write(f' This Cancer is Benign, testing by DecisionTreeClassifier.')
+  st.write(f' This Cancer is Benign, testing by RandomForestClassifier.')
