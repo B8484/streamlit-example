@@ -77,6 +77,12 @@ st.write("1. Logistic Regression")
 st.write("2. DecisionTreeClassifier")
 st.write("3. RandomForestClassifier")
 
+st.write("Splitting the data into Training Data and Testing Data.")
+
+code2 = """
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y,  test_size = 0.2, random_state = 0)
+"""
+st.code(code2, language = "Python")
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y,  test_size = 0.2, random_state = 0)
 
 model1 = LogisticRegression()
