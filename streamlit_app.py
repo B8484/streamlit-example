@@ -46,7 +46,7 @@ training_data_accuracy2 = accuracy_score(Y_train, X_train_prediction2)
 X_train_prediction3 = model3.predict(X_train)
 training_data_accuracy3 = accuracy_score(Y_train, X_train_prediction3)
 
-st.subhead('Accuracy of each Algorithm')
+st.subheader('Accuracy of each Algorithm')
 st.write('Accuracy on training data using LogisticRegression = ', training_data_accuracy1)
 st.write('Accuracy on training data using DecisionMakingClassifier = ', training_data_accuracy2)
 st.write('Accuracy on training data using RandomForerstClassifier = ', training_data_accuracy3)
