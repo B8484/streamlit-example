@@ -23,12 +23,50 @@ data_frame = pd.DataFrame(breast_cancer_dataset.data, columns = breast_cancer_da
 # adding the target column to the data frame
 data_frame['label'] = breast_cancer_dataset.target
 
+st.write("Data Preprocessing")
 code = """
 # check for null values, missing values
 data_frame.isnull().sum()
 """
+
 st.code(code, language = "Python")
 
+code1 = """
+mean radius                0
+mean texture               0
+mean perimeter             0
+mean area                  0
+mean smoothness            0
+mean compactness           0
+mean concavity             0
+mean concave points        0
+mean symmetry              0
+mean fractal dimension     0
+radius error               0
+texture error              0
+perimeter error            0
+area error                 0
+smoothness error           0
+compactness error          0
+concavity error            0
+concave points error       0
+symmetry error             0
+fractal dimension error    0
+worst radius               0
+worst texture              0
+worst perimeter            0
+worst area                 0
+worst smoothness           0
+worst compactness          0
+worst concavity            0
+worst concave points       0
+worst symmetry             0
+worst fractal dimension    0
+label                      0
+dtype: int64
+"""
+
+st.code(code1, language = "Python")
 st.dataframe(data_frame.describe())
 
 X = data_frame.drop(columns = 'label', axis = 1)
