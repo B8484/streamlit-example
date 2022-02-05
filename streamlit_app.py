@@ -7,6 +7,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, f1_score, recall_score
+import streamlit as st
+
+st.header("This is a header")
 
 # loading the data from sklearn
 breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
@@ -16,6 +19,8 @@ data_frame = pd.DataFrame(breast_cancer_dataset.data, columns = breast_cancer_da
 
 # adding the target column to the data frame
 data_frame['label'] = breast_cancer_dataset.target
+
+st.dataframe(data_frame.describe())
 
 X = data_frame.drop(columns = 'label', axis = 1)
 Y = data_frame['label']
