@@ -27,7 +27,8 @@ st.dataframe(data_frame.describe())
 X = data_frame.drop(columns = 'label', axis = 1)
 Y = data_frame['label']
 
-st.bar_chart(sns.countplot(data_frame['label'], label = 'count'))
+pre = sns.countplot(data_frame['label'], label = 'count')
+st.pyplot(pre)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y,  test_size = 0.2, random_state = 0)
 
 model1 = LogisticRegression()
