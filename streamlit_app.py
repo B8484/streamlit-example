@@ -9,9 +9,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, f1_score, recall_score
 import streamlit as st
 
-st.header("This is a header")
+st.header("Breast Cancer Detection.")
 
-st.write("Datasets [link](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)")
+st.write("Datasets [ScikitLearn](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html)")
 
 # loading the data from sklearn
 breast_cancer_dataset = sklearn.datasets.load_breast_cancer()
@@ -47,9 +47,9 @@ X_train_prediction3 = model3.predict(X_train)
 training_data_accuracy3 = accuracy_score(Y_train, X_train_prediction3)
 
 st.subheader('Accuracy of each Algorithm')
-st.write('Accuracy on training data using LogisticRegression = ', training_data_accuracy1)
-st.write('Accuracy on training data using DecisionMakingClassifier = ', training_data_accuracy2)
-st.write('Accuracy on training data using RandomForerstClassifier = ', training_data_accuracy3)
+st.write('Accuracy on training data using LogisticRegression = ', training_data_accuracy1,"%")
+st.write('Accuracy on training data using DecisionMakingClassifier = ', training_data_accuracy2,"%")
+st.write('Accuracy on training data using RandomForerstClassifier = ', training_data_accuracy3,"%")
 
 # accuracy on test data
 X_test_prediction1 = model1.predict(X_test)
@@ -105,10 +105,10 @@ prediction = model1.predict(input_data_reshaped)
 
 if (prediction[0] == 0):
    #print(f'This Cancer is Malignant, testing by LogistiRegression.')
-   st.write('This Cancer is Malignant, testing by LogistiRegression')
+   st.write('This Cancer is Malignant, testing by LogistiRegression.')
 else:
    #print(f'This Cancer is Benign, testing by LogisticRegression.')
-   st.write('This Cancer is Malignant, testing by LogistiRegression')
+   st.write('This Cancer is Malignant, testing by LogistiRegression.')
    
    
 prediction = model2.predict(input_data_reshaped)
