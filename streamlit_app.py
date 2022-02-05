@@ -50,10 +50,6 @@ st.write('Accuracy on training data using LogisticRegression = ', training_data_
 st.write('Accuracy on training data using DecisionMakingClassifier = ', training_data_accuracy2)
 st.write('Accuracy on training data using RandomForerstClassifier = ', training_data_accuracy3)
 
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(Y_test, X_test_prediction1)
-st.write(cm)
-
 # accuracy on test data
 X_test_prediction1 = model1.predict(X_test)
 test_data_accuracy1 = accuracy_score(Y_test, X_test_prediction1)
@@ -69,6 +65,10 @@ X_test_prediction3 = model1.predict(X_test)
 test_data_accuracy3 = accuracy_score(Y_test, X_test_prediction3)
 test_data_precision3  = precision_score(Y_test, X_test_prediction3)
 test_data_recall_score3 = recall_score(Y_test, X_test_prediction3)
+
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(Y_test, X_test_prediction1)
+st.write(cm)
 
 st.write('Accuracy on the test data using LogisticRegression = ', test_data_accuracy1,'%')
 st.write('Precision on the test data using LogisticRegression = ', test_data_precision1,'%')
