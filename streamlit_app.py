@@ -23,6 +23,12 @@ data_frame = pd.DataFrame(breast_cancer_dataset.data, columns = breast_cancer_da
 # adding the target column to the data frame
 data_frame['label'] = breast_cancer_dataset.target
 
+code = """
+# check for null values, missing values
+data_frame.isnull().sum()
+"""
+st.code(code, language = "Python")
+
 st.dataframe(data_frame.describe())
 
 X = data_frame.drop(columns = 'label', axis = 1)
