@@ -27,6 +27,7 @@ st.dataframe(data_frame.describe())
 X = data_frame.drop(columns = 'label', axis = 1)
 Y = data_frame['label']
 
+st.bar_chart(sns.countplot(data_frame['label'], label = 'count'))
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y,  test_size = 0.2, random_state = 0)
 
 model1 = LogisticRegression()
@@ -88,10 +89,10 @@ st.write('Precision on the test data using LogisticRegression = ', test_data_pre
 st.write('Recall Score on the test data using LogisticRegression = ', test_data_recall_score1,'%')
 
 import streamlit as st
+st.subheader('Prediction')
 input_data = st.text_input('Enter the features:',"10.95,21.35,71.9,371.1,0.1227,0.1218,0.1044,0.05669,0.1895,0.0687,0.2366,1.428,1.822,16.97,0.008064,0.01764,0.02595,0.01037,0.01357,0.00304,12.84,35.34,87.22,514,0.1909,0.2698,0.4023,0.1424,0.2964,0.09606")
 #st.text_input("Input", "အမုန်းမပွားရဘူးနော်")
 #st.write(type(input_data))
-st.subheader('Prediction')
 input_data = input_data.strip().split(",")
 input_data = np.asarray([float(i) for i in input_data]).reshape(1, -1)
 
