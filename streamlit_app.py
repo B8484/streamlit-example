@@ -69,20 +69,20 @@ test_data_recall_score3 = recall_score(Y_test, X_test_prediction3)
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(Y_test, X_test_prediction1)
-st.write("Confusion Matrix")
+st.subheader("Confusion Matrix")
 st.write(cm)
 
-st.write("Accuracy, Precision, and Recall of LogisticRegression")
+st.subheader("Accuracy, Precision, and Recall of LogisticRegression")
 st.write('Accuracy on the test data using LogisticRegression = ', test_data_accuracy1,'%')
 st.write('Precision on the test data using LogisticRegression = ', test_data_precision1,'%')
 st.write('Recall Score on the test data using LogisticRegression = ', test_data_recall_score1,'%')
 
-st.write("Accuracy, Precision, and Recall of DecisionForestClassifier")
+st.subheader("Accuracy, Precision, and Recall of DecisionForestClassifier")
 st.write('Accuracy on the test data using DecisionForestClassifier = ', test_data_accuracy2,'%')
 st.write('Precision on the test data using DecisionForestClassifier = ', test_data_precision2,'%')
 st.write('Recall Score on the test data using DecisionForestClassifier = ', test_data_recall_score2,'%')
 
-st.write("Accuracy, Precision, and Recall of RandomForestClassifier")
+st.subheader("Accuracy, Precision, and Recall of RandomForestClassifier")
 st.write('Accuracy on the test data using RandomForestClassifier = ', test_data_accuracy3,'%')
 st.write('Precision on the test data using LogisticRegression = ', test_data_precision1,'%')
 st.write('Recall Score on the test data using LogisticRegression = ', test_data_recall_score1,'%')
@@ -91,6 +91,7 @@ import streamlit as st
 input_data = st.text_input('Enter the features:',"10.95,21.35,71.9,371.1,0.1227,0.1218,0.1044,0.05669,0.1895,0.0687,0.2366,1.428,1.822,16.97,0.008064,0.01764,0.02595,0.01037,0.01357,0.00304,12.84,35.34,87.22,514,0.1909,0.2698,0.4023,0.1424,0.2964,0.09606")
 #st.text_input("Input", "အမုန်းမပွားရဘူးနော်")
 #st.write(type(input_data))
+st.subhead('Prediction')
 input_data = input_data.strip().split(",")
 input_data = np.asarray([float(i) for i in input_data]).reshape(1, -1)
 
