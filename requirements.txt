@@ -4,3 +4,4 @@ sklearn
 matplotlib
 streamlit
 yfinance
+seaborn
